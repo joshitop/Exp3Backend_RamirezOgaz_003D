@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="pareja, amigos, familiares, servicios de contratacion">
+    <meta name="description" content="Tienes dinero pero te encuentras solo, esta es tu oportunidad, reviza nuestros servicios">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta http-equiv="cache-control" content="no-cache"/> <!-- no almacenar cache-->
+    <meta name="robots" content="noindex"/>  <!-- que no indexe subpaginas, aun no aplicada -->
+    <meta name="author" content="W4SHE73 & joshitop"/>
+    <link rel="stylesheet" href= "../static/core/CSS/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous"> 
+    <link rel="icon" href="../static/core/IMG/favicon.ico">
+    {% load static %}
+    <title>JOUKOSO!</title>
+  </head>
+
+  <body class="parrallax" id="img1">
+    <nav class="navbar navbar-expand-sm navbar-light bg-light">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#opciones">
+          <span class="navbar-toggler-icon"></span>
+      </button>
+            
+      <!-- logo -->
+      <a class="navbar-brand" href="#">
+        <img src="../static/core/IMG/logo.png" width="50" height="50" alt="">
+      </a>
+            
+      <!-- enlaces -->
+      <div class="collapse navbar-collapse" id="opciones">   
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="{%url 'index' %}">Index</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{%url 'who'%}">We are</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{%url 'galery'%}">Our personal</a>
+          </li>        
+          <li class="nav-item">
+            <a class="nav-link" href="{%url 'foro'%}">Foro</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    
+
+    <!-- Main -->
+    <div class="container margin estilo-blanco">       
+        <h2>Reseñas</h2><a class="btn btn-primary" href="{% url 'crearReseña' %}">Nueva Reseña</a>     
+        <hr>
+        
+        {% for foro in date %}
+          <div class="row">
+            
+            <!-- Sección de noticias -->
+            <div class="col-12 col-lg-9 mb-5">
+              <!-- Artículos -->
+              <div class="row">
+                <div class="col-3">                    
+                <p class="lead">Escrito por {{foro.nombreUsuario}}</p>
+                <p class="lead">Edad: {{foro.edad}}</p>
+                <p class="lead">Estrellas: {{foro.numeroEstrellas}}</p>
+                <a class="btn btn-primary" href="{% url 'modificarReseña' foro.nombreUsuario %}"> Modificar </a>
+                <a class="btn btn-danger" href="{% url 'eliminarReseña' foro.nombreUsuario %}"> Eliminar </a>
+                </div>
+                <div class="col-9">
+                  <a href="#"><h3>Clasificando a {{foro.personalContratado}}</h3></a>
+                  <p>{{foro.comentario}}</p>
+                  <hr>
+                </div>
+                
+
+              </div>
+              
+            </div>
+            
+              <!-- Fin Artículos -->              
+            </div>
+            {%endfor%}            
+          </div>
+      
+       
+      <footer id="footer" class="bg-light text-center text-lg-start">
+        <div>
+         <img src="../static/core/IMG/Intagram_icon.png" width="50" height="50">
+         <a class="text-dark" href="https://www.instagram.com/w4she73/">Danilo Ogaz</a>  & 
+         <a class="text-dark" href="https://www.instagram.com/into_space_mod100/">José Ramírez</a> @Copyrigth Derechos reservados.
+         <img src="../static/core/IMG/github_icon.png" width="50" height="50"> 
+         <a class="text-dark" href="https://github.com/W4SHE73/Experiencia1_ogazramirez_3">GitHub del Repositorio</a>
+        </div>
+      </footer>
+
+      
+           
+  </body>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
+  <script src="../static/core/JS/"></script>
+</html>

@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="es"> 
+  <head>
+    {% load static %}
+    <meta charset="utf-8">
+    <meta name="keywords" content="pareja, amigos, familiares, servicios de contratacion">
+    <meta name="description" content="Tienes dinero pero te encuentras solo, esta es tu oportunidad, reviza nuestros servicios">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta http-equiv="cache-control" content="no-cache"/> <!-- no almacenar cache-->
+    <meta name="robots" content="noindex"/>  <!-- que no indexe subpaginas, aun no aplicada -->
+    <meta name="author" content="W4SHE73 & joshitop"/>
+    <link rel="stylesheet" href= "../static/core/CSS/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous"> 
+    <link rel="icon" href="../static/core/IMG/favicon.ico">
+    <title>Creando Personal</title>
+  </head>
+
+  <body class="parrallax" id="img1">
+    {% load static %}
+    <nav class="navbar navbar-expand-sm navbar-light bg-light">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#opciones">
+          <span class="navbar-toggler-icon"></span>
+      </button>
+            
+      <!-- logo -->
+      <a class="navbar-brand" href="#">
+        <img src="../static/core/IMG/logo.png" width="50" height="50" alt="">
+      </a>
+            
+      <!-- enlaces -->
+      <div class="collapse navbar-collapse" id="opciones">   
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="{%url 'index' %}">Index</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{%url 'who'%}">We are</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{%url 'galery'%}">Our personal</a>
+          </li>        
+          <li class="nav-item">
+            <a class="nav-link" href="{%url 'foro'%}">Foro</a>
+          </li>      
+        </ul>
+      </div>
+    </nav>
+    <div class="container d-flex flex-column justify-content-center align-items-center text-center estilo-blanco margin">
+        <div class="row">
+            <h1>Creando Personal</h1>
+        </div>
+        <div class="row">
+            <div class="row">
+                <form method="POST" action="#" id="formulario">
+                    {%csrf_token%}
+                    <div class="form-group">
+                        {{personal_form.nombre.label}}
+                        {{personal_form.nombre}}
+                    </div>
+                    <div class="form-group">
+                        {{personal_form.edad.label}}
+                        {{personal_form.edad}}
+                    </div>
+                    <div class="form-group">
+                        {{personal_form.especialidad.label}}
+                        {{personal_form.especialidad}}
+                    </div>
+                    <div class="form-group">
+                      {{personal_form.descrip.label}}
+                      {{personal_form.descrip}}
+                    </div>
+                    <div class="form-group">
+                      {{personal_form.image.label}}
+                      {{personal_form.image.url}}
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" class="btn btn-danger" id="enviar" value="Enviar">
+                       <input type="reset" class="btn btn-primary" id="limpiar" value="Limpiar">
+                   </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <footer id="footer" class="bg-light text-center text-lg-start">
+        <div>
+         <img src="../static/core/IMG/Intagram_icon.png" width="50" height="50">
+         <a class="text-dark" href="https://www.instagram.com/w4she73/">Danilo Ogaz</a>  & 
+         <a class="text-dark" href="https://www.instagram.com/into_space_mod100/">José Ramírez</a> @Copyrigth Derechos reservados.
+         <img src="../static/core/IMG/github_icon.png" width="50" height="50"> 
+         <a class="text-dark" href="https://github.com/W4SHE73/Experiencia1_ogazramirez_3">GitHub del Repositorio</a>
+        </div>
+      </footer>
+
+  </body>
+</html>
