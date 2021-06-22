@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="es"> 
+  <head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="pareja, amigos, familiares, servicios de contratacion">
+    <meta name="description" content="Tienes dinero pero te encuentras solo, esta es tu oportunidad, reviza nuestros servicios">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta http-equiv="cache-control" content="no-cache"/> <!-- no almacenar cache-->
+    <meta name="robots" content="noindex"/>  <!-- que no indexe subpaginas, aun no aplicada -->
+    <meta name="author" content="W4SHE73 & joshitop"/>
+    <!-- <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css"> -->
+	  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"> 
+	  <link rel="stylesheet" href="CSS/formulario.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous"> 
+    <link rel="icon" href="IMG/favicon.ico">
+    <title>JOUKOSO!</title>
+  </head>
+
+  <body class="parrallax" id="img1">
+      <nav class="navbar navbar-expand-sm navbar-light bg-light">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#opciones">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+              
+        <!-- logo -->
+        <a class="navbar-brand" href="#">
+          <img src="img/logo.png" width="50" height="50" alt="">
+        </a>
+              
+        <!-- enlaces -->
+        <div class="collapse navbar-collapse" id="opciones">   
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Index</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="who.html">We are</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="galery.html">Our personal</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="login.html">Login</a>
+            </li> 
+            <li class="nav-item">
+              <a class="nav-link" href="register.html">Register</a>
+            </li>        
+          </ul>
+        </div>
+      </nav>
+      <main>
+        <form action="login.html" class="formulario" id="formulario">
+            <!-- Grupo: Nombre -->
+          <div class="formulario__grupo" id="grupo__nombre">
+            <label for="nombre" class="formulario__label">Nombre</label>
+            <div class="formulario__grupo-input">
+              <input type="text" class="formulario__input" name="nombre" id="nombre" placeholder="Ricardo Andres">
+              <i class="formulario__validacion-estado fas fa-times-circle"></i>
+            </div>
+            <p class="formulario__input-error">Los nombre tiene que ser de 4 a 40 caracteres y solo puede contener letras, espacios y tildes.</p>
+          </div>
+          <!-- Grupo: Apellido -->
+          <div class="formulario__grupo" id="grupo__apellido">
+            <label for="nombre" class="formulario__label">Apellidos</label>
+            <div class="formulario__grupo-input">
+              <input type="text" class="formulario__input" name="apellido" id="apellido" placeholder="Salinas Fuentes">
+              <i class="formulario__validacion-estado fas fa-times-circle"></i>
+            </div>
+            <p class="formulario__input-error">Los apellidos tiene que ser de 4 a 40 caracteres y solo puede contener letras, espacios y tildes</p>
+          </div>
+          <!-- Grupo: Usuario -->
+          <div class="formulario__grupo" id="grupo__usuario">
+            <label for="usuario" class="formulario__label">Usuario</label>
+            <div class="formulario__grupo-input">
+              <input type="text" class="formulario__input" name="usuario" id="usuario" placeholder="ej: kanikus2030">
+              <i class="formulario__validacion-estado fas fa-times-circle"></i>
+            </div>
+            <p class="formulario__input-error">El usuario tiene que ser de 4 a 16 dígitos y solo puede contener numeros, letras y guion bajo.</p>
+          </div>
+
+           <!-- Grupo: Correo Electronico -->
+           <div class="formulario__grupo" id="grupo__correo">
+            <label for="correo" class="formulario__label">Correo Electrónico</label>
+            <div class="formulario__grupo-input">
+              <input type="email" class="formulario__input" name="correo" id="correo" placeholder="correo@correo.cl">
+              <i class="formulario__validacion-estado fas fa-times-circle"></i>
+            </div>
+            <p class="formulario__input-error">El correo solo puede contener caracteres de tipo letra, numericos, puntos, guiones y guion bajo.</p>
+          </div>
+                 
+          <!-- Grupo: Contraseña -->
+          <div class="formulario__grupo" id="grupo__password">
+            <label for="password" class="formulario__label">Contraseña</label>
+            <div class="formulario__grupo-input">
+              <input type="password" class="formulario__input" name="password" id="password" placeholder="ingrese contraseña (minimo 8 caracteres)">
+              <i class="formulario__validacion-estado fas fa-times-circle"></i>
+            </div>
+            <p class="formulario__input-error">La contraseña debe tener minimo 8 caracteres</p>
+          </div>
+
+          <!-- Grupo: Contraseña 2 -->
+			    <div class="formulario__grupo" id="grupo__password2">
+				    <label for="password2" class="formulario__label">Repetir Contraseña</label>
+				    <div class="formulario__grupo-input">
+					      <input type="password" class="formulario__input" name="password2" id="password2" placeholder="repita contraseña">
+				    	  <i class="formulario__validacion-estado fas fa-times-circle"></i>
+				    </div>
+				    <p class="formulario__input-error">Ambas contraseñas deben ser iguales.</p>
+		    	</div>
+
+          <!-- Grupo: Teléfono -->
+          <div class="formulario__grupo" id="grupo__telefono">
+            <label for="telefono" class="formulario__label">Teléfono</label>
+            <div class="formulario__grupo-input">
+                <input type="text" class="formulario__input" name="telefono" id="telefono" placeholder="449123456">
+                <i class="formulario__validacion-estado fas fa-times-circle"></i>
+            </div>
+            <p class="formulario__input-error">El telefono solo puede contener caracteres de tipo numericos y el maximo son 9 dígitos.</p>
+          </div>  
+          <!--Grupo: Ciudad -->
+          <div class="formulario__grupo" id="grupo__ciudad">
+            <label for="telefono" class="formulario__label">Ciudad</label>
+            <div class="formulario__grupo-input">
+                <input type="text" class="formulario__input" name="ciudad" id="ciudad" placeholder="Santiago">
+                <i class="formulario__validacion-estado fas fa-times-circle"></i>
+            </div>
+            <p class="formulario__input-error">La direccion solo puede contener caracteres de tipo numerico y letras.</p>
+          </div>
+        <!--aqui saque cosas sauq1-->
+            <!-- Grupo: Terminos y Condiciones -->
+			    <div class="formulario__grupo" id="grupo__terminos">
+				    <label class="formulario__label">
+					  <input class="formulario__checkbox" type="checkbox" name="terminos" id="terminos">
+					    Acepto los Terminos y Condiciones
+				    </label>
+          </div>
+        <div class="formulario__mensaje" id="formulario__mensaje">
+            <p><i class="fas fa-exclamation-triangle"></i> <b>Error:</b> Por favor rellena el formulario correctamente. </p>
+        </div>
+    
+            <div class="formulario__grupo formulario__grupo-btn-enviar">
+            <button type="submit" class="formulario__btn center">Enviar</button>
+            <p class="formulario__mensaje-exito" id="formulario__mensaje-exito">Formulario enviado exitosamente!</p>
+            </div>
+        </form>
+      </main>
+      <footer id="footer" class="bg-light text-center text-lg-start">
+        <div >
+          <img src="IMG/Intagram_icon.png" width="50" height="50">
+          <a class="text-dark" href="https://www.instagram.com/w4she73/">Danilo Ogaz</a>  & 
+          <a class="text-dark" href="https://www.instagram.com/into_space_mod100/">José Ramírez</a> @Copyrigth Derechos reservados.
+          <img src="IMG/github_icon.png" width="50" height="50"> 
+          <a class="text-dark" href="https://github.com/W4SHE73/Experiencia1_ogazramirez_3">GitHub del Repositorio</a>
+       </div>
+      </footer>
+  
+      <!-- boostrap V4.6 -->
+      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
+      <script src="JS/register.js"></script>
+      <!--Para efecto de check en los datos-->
+      <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
+  </body>
+</html>
